@@ -103,7 +103,7 @@ class MyPainter extends CustomPainter {
     //   ),
     //   handleBarPaint,
     // );
-    final double c = size.width / 2;
+    final double c = size.width / 5;
   
     // List<List<double>> arr = [
     //   [0, 0],
@@ -127,7 +127,8 @@ class MyPainter extends CustomPainter {
     //     outerCirclePaint,
     //   );
     // }
-    TreeNode? root = deserialize("4,-7,#,#,-3,-9,9,6,0,#,-1,#,#,6,-4,#,#,#,#,-7,-6,5,#,#,#,-6,9,-2,#,#,#,#,-3,-4,#,#,#");
+    // 4,-7,#,#,-3,-9,9,6,0,#,-1,#,#,6,-4,#,#,#,#,-7,-6,5,#,#,#,-6,9,-2,#,#,#,#,-3,-4,#,#,#
+    TreeNode? root = deserialize("1,2,4,8,#,#,9,#,#,5,10,#,#,11,#,#,3,6,#,13,#,#,7,14,#,#,#");
     List<int> arr = getHeight(root);
     TreeNode? r = coordinate(arr[2],0 root,true);
     r?.x=0;
@@ -210,14 +211,12 @@ class MyPainter extends CustomPainter {
         handleBarPaint,
       );
 
-   
-
     canvas.drawCircle(
       Offset(
         (root.x)! * factor + c,
         (root.y)! * factor,
       ),
-      4,
+      10,
       outerCirclePaint,
     );
 
