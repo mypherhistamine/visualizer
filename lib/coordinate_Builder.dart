@@ -1,11 +1,9 @@
 import 'dart:collection';
-
 import 'package:visualizer/binary_tree.dart';
 
 //left
 //right
 //overall
-
 int max(int x, int y) {
   return x > y ? x : y;
 }

@@ -128,7 +128,8 @@ class MyPainter extends CustomPainter {
     //   );
     // }
     // 4,-7,#,#,-3,-9,9,6,0,#,-1,#,#,6,-4,#,#,#,#,-7,-6,5,#,#,#,-6,9,-2,#,#,#,#,-3,-4,#,#,#
-    TreeNode? root = deserialize("1,2,4,8,#,#,9,#,#,5,10,#,#,11,#,#,3,6,#,13,#,#,7,14,#,#,#");
+    // 1,2,4,8,#,#,9,#,#,5,10,#,#,11,#,#,3,6,#,13,#,#,7,14,#,#,#
+    TreeNode? root = deserialize("1,2,#,#,3,4,6,10,18,32,#,#,33,#,#,19,#,34,#,#,11,20,35,#,#,#,21,36,#,#,#,7,12,22,#,#,23,#,#,13,25,#,#,26,#,#,5,8,14,27,#,#,28,#,#,15,29,#,#,#,9,16,30,#,#,31,#,#,17,#,#");
     List<int> arr = getHeight(root);
     TreeNode? r = coordinate(arr[2],0 root,true);
     r?.x=0;
@@ -193,7 +194,7 @@ class MyPainter extends CustomPainter {
       return null;
     }
 
-    TreeNode? left = treeBuilder(
+   TreeNode? left = treeBuilder(
         canvas, root.left, factor, c, outerCirclePaint, handleBarPaint);
     TreeNode? right = treeBuilder(
         canvas, root.right, factor, c, outerCirclePaint, handleBarPaint);
