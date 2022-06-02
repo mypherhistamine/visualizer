@@ -66,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Column(
-
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
             // children horizontally, and tries to be as tall as its parent.
@@ -81,19 +80,22 @@ class _MyHomePageState extends State<MyHomePage> {
             // center the children vertically; the main axis here is the vertical
             // axis because Columns are vertical (the cross axis would be
             // horizontal).\
-          
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  
                   children: [
-                    SizedBox(width: 500,),
-                     SearchIcon(factor:factor),
-                     SizedBox(width: 500,)
+                    SizedBox(
+                      width: 500,
+                    ),
+                    SearchIcon(factor: factor),
+                    SizedBox(
+                      width: 500,
+                    )
                   ],
-                 ),
+                ),
               ),
               Slider(
                 value: factor,
